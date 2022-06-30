@@ -2,13 +2,13 @@ import React from "react";
 import Button from "./Button";
 import Card from "./Card";
 import classes from "./ErrorModal.module.css";
-import { ReactDOM } from "react";
+import ReactDOM from "react-dom";
 
-const Backdrop = () => {
-  return <div className={classes.backdrop} onClick={props.onConfirm} />;
+const Backdrop = (props) => {
+  return (<div className={classes.backdrop} onClick={props.onConfirm} />);
 };
 
-const ModalOverlay = () => {
+const ModalOverlay = (props) => {
   return (
     <Card className={classes.modal}>
       <header className={classes.header}>
@@ -40,7 +40,6 @@ const ErrorModal = (props) => {
         />,
         document.getElementById("overlay-root")
       )}
-      ;
     </>
   );
 };
